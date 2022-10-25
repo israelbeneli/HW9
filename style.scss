@@ -1,0 +1,55 @@
+$color1:#6DB7D5;
+$color2:#93BDD5;
+$color3:#3192BB;
+$color4:#B7D6E8;
+$color5:white;
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    direction: ltr;
+    color: $color5;
+    background: linear-gradient( $color2 , $color4);
+    input{
+        width: 95%;
+        height: 25px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+    }
+}
+.header{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background-color: $color4;
+}
+.form{
+    li{
+        list-style-type:none;
+        padding-top: 2.5px;
+    }
+    ul{
+        padding-inline-start:10px;
+    }
+}
+.buttons{
+    button{
+        background-color:  $color1;
+        width: 45%;
+        height: 30px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+}
+@mixin div($colory:red) {
+    width: 100%;
+    background-color: $colory;
+    text-align: center;
+}
+.success{
+    @include div($colory:green)
+}
+.error{
+    @include div($colory:red)
+}
